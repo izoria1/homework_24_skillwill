@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item Detail</title>
+</head>
+<body>
+    <h1>Item Detail</h1>
+    <p>Name: {{ object.name }}</p>
+    <p>Description: {{ object.description }}</p>
+    <a href="{% url 'item_list' %}">Back to list</a>
+</body>
+</html>

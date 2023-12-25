@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Item List</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    <a href="{% url 'item_new' %}">New Item</a>
+    <ul>
+        {% for item in object_list %}
+            <li>
+                <a href="{% url 'item_detail' item.id %}">{{ item.name }}</a>
+                - <a href="{% url 'item_edit' item.id %}">Edit</a>
+                - <a href="{% url 'item_delete' item.id %}">Delete</a>
+            </li>
+        {% empty %}
+            <li>No items available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
